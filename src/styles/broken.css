@@ -1,0 +1,99 @@
+/* Invalid CSS with multiple syntax errors */
+
+/* Missing selector */
+{
+  color: red;
+  background: blue;
+}
+
+/* Invalid property names */
+.broken-class {
+  invalid-property: value;
+  colr: red; /* Typo in property name */
+  background-color: #gggggg; /* Invalid hex color */
+  margin: 10px 20px 30px; /* Missing 4th value for shorthand */
+  padding: ; /* Missing value */
+  font-size: 16px 18px; /* Invalid font-size value */
+}
+
+/* Invalid pseudo-selector syntax */
+.hover-error:hover: {
+  color: blue;
+}
+
+/* Missing closing brace */
+.missing-brace {
+  color: green;
+
+/* Invalid media query syntax */
+@media screen and (max-width: ) {
+  .responsive {
+    display: none;
+  }
+}
+
+/* Invalid keyframes */
+@keyframes broken-animation
+  0% { opacity: 1; }
+  50% { opacity: 0.5 } /* Missing semicolon */
+  100% { opacity: 0; }
+}
+
+/* Invalid at-rule */
+@import "nonexistent.css"
+
+/* Selector with invalid characters */
+.class@name {
+  color: red;
+}
+
+/* Invalid nested rules (CSS not SCSS) */
+.parent {
+  color: blue;
+  
+  .child {
+    color: red; /* Nesting not supported in plain CSS */
+  }
+}
+
+/* Invalid CSS custom properties */
+:root {
+  --invalid-var: ;
+  --another-var: value without quotes;
+  --broken-syntax: calc(100% - );
+}
+
+/* Using CSS Grid with invalid values */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(invalid, 1fr));
+  grid-gap: 20px 30px 40px; /* Too many values */
+}
+
+/* Invalid flexbox properties */
+.flex-container {
+  display: flex;
+  justify-content: invalid-value;
+  align-items: also-invalid;
+  flex-direction: up; /* Not a valid direction */
+}
+
+/* Malformed CSS functions */
+.function-errors {
+  background: linear-gradient(to bottom, red, blue, green, yellow, orange, purple, pink); /* Missing closing paren */
+  transform: translateX(50px translateY(100px); /* Malformed transform */
+  filter: blur(5px brightness(150%) contrast(120%); /* Missing closing paren */
+}
+
+/* Invalid CSS units */
+.unit-errors {
+  width: 100invalid;
+  height: 200wrongunit;
+  margin: 10pixels; /* Invalid unit */
+}
+
+/* CSS with JavaScript syntax (invalid) */
+.javascript-in-css {
+  color: ${colors.primary}; /* Template literal in CSS */
+  background: function() { return "blue"; }; /* Function in CSS */
+}

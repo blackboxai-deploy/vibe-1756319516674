@@ -1,0 +1,36 @@
+/* CSS Module with syntax errors */
+
+/* Invalid class name for CSS modules */
+.class-name {
+  color: red;
+  /* Missing closing brace
+}
+
+/* Selector not valid for CSS modules */
+#invalid-id {
+  background: blue;
+}
+
+/* Complex selector not recommended for modules */
+.parent .child > .grandchild {
+  margin: 10px;
+}
+
+/* Invalid CSS syntax */
+.broken-syntax {
+  color: #invalid-hex;
+  background: unknown-function(50%);
+  margin: calc(100% - ; /* Missing closing parenthesis */
+}
+
+/* Using global keywords incorrectly */
+:global(.global-class {
+  /* Missing closing parenthesis */
+  font-size: 16px;
+}
+
+/* Invalid CSS custom properties */
+.custom-props {
+  --invalid-prop: ;
+  color: var(--non-existent-prop);
+}
